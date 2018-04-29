@@ -1,0 +1,24 @@
+cd C:/Users/homag/Desktop/MAGGIE/HKU/COMP3322/Assign2/FunBooks/
+npm start
+
+cd C:\Program Files\MongoDB\Server\3.6\bin
+mongod --dbpath C:/Users/homag/Desktop/MAGGIE/HKU/COMP3322/Assign2/FunBooks/data
+
+
+cd C:\Program Files\MongoDB\Server\3.6\bin
+mongo
+use assigment2
+
+
+
+
+db.bookCollection.insert({'title': '19Assignment', 'category': 'Assignment', 'authorList':['Maggie'], 'price': 20, 'publisher': 'Maggie Press', 'date': 'November 15, 1996', 'coverImage': 'images/book2.jpg', 'description': 'The diary written by Maggie.'})
+
+db.userCollection.insert({'name': 'Henry', 'password': '123456', 'status': 'offline', 'cart':[], 'totalnum': 3})
+db.userCollection.insert({'name': 'Henry', 'password': '123456', 'status': 'offline', 'cart':[{'bookId': 'xxx', 'quantity': 1}, {'bookId': 'xxx', 'quantity': 2}], 'totalnum': 3})
+db.bookCollection.insert({'title': Chinese History, 'category': 'History', 'authorList':[¡¥China¡¦], 'price': 200, 'publisher': China Press', 'date': May 15, 2009, 'coverImage': 'images/book3.jpg', 'description': 'The history written by Chinese.'})
+
+
+db.userCollection.aggregate([{ $match : { "_id" : ObjectId("5ade1e4518ec1e68c1b359d7")}}]);
+
+db.bookCollection.insert({'title': 'Book C', 'category': 'History', 'authorList':['Maggie'], 'price': 468, 'publisher': 'Maggie Press', 'date': 'November 15, 1996', 'coverImage': 'images/book2.jpg', 'description': 'The diary written by Maggie.'})
